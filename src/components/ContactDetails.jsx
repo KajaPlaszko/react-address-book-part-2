@@ -1,15 +1,28 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+
 
 function ContactDetails() {
 	const { id } = useParams();
 	const [contact, setContact] = useState(null);
+    const navigate = useNavigate();
+
 
 	useEffect(() => {
 		fetch(`https://boolean-uk-api-server.fly.dev/KajaPlaszko/contact/${id}`)
 			.then((response) => response.json())
 			.then((data) => setContact(data));
 	}, [id]);
+
+    function handleDelete() {
+		fetch("https://boolean-uk-api-server.fly.dev/KajaPlaszko/contact", {
+			method: "DELETE",
+		}).then((response) => {
+			if (response.ok) {
+				navigate("/contacts");
+			}
+		});
+	}
 
 	if (!contact) {
 		return <p>Loading...</p>;
@@ -19,7 +32,8 @@ function ContactDetails() {
         <div>
             <h1>{contact.firstName} {contact.lastName}</h1>
             <p>Street: {contact.street}</p>
-            <p>Cityr: {contact.city}</p>
+            <p>City: {contact.city}</p>
+            <button onClick={handleDelete}>Delete Contact</button>
         </div>
     );
 }
