@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ContactList from "./components/ContactList";
 import ContactDetails from "./components/ContactDetails";
 import CreateContact from "./components/CreateContact";
-import UpdateContact from "./components/UpdateContact";
 
 function App() {
 	return (
@@ -40,7 +39,7 @@ function App() {
 						/>
 						<Route
 							path="/contacts/:id/update"
-							element={<UpdateContact />}
+							element={<ContactDetails />}
 						/>
 					</Routes>
 				</div>

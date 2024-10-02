@@ -75,9 +75,11 @@ function ContactDetails() {
 									name="firstName"
 									value={contact.firstName}
 									onChange={handleChange}
+									required
 								/>
 							</label>
 							<br />
+
 							<label>
 								Last Name:
 								<input
@@ -85,9 +87,46 @@ function ContactDetails() {
 									name="lastName"
 									value={contact.lastName}
 									onChange={handleChange}
+									required
 								/>
 							</label>
 							<br />
+							<label>
+								Gender:
+								<input
+									type="text"
+									name="gender"
+									value={contact.gender}
+									onChange={handleChange}
+									required
+								/>
+							</label>
+							<br />
+
+							<label>
+								Email:
+								<input
+									type="text"
+									name="email"
+									value={contact.email}
+									onChange={handleChange}
+									required
+								/>
+							</label>
+							<br />
+
+							<label>
+								Job Title:
+								<input
+									type="text"
+									name="jobTitle"
+									value={contact.jobTitle}
+									onChange={handleChange}
+									required
+								/>
+							</label>
+							<br />
+
 							<label>
 								Street:
 								<input
@@ -95,9 +134,11 @@ function ContactDetails() {
 									name="street"
 									value={contact.street}
 									onChange={handleChange}
+									required
 								/>
 							</label>
 							<br />
+
 							<label>
 								City:
 								<input
@@ -105,6 +146,67 @@ function ContactDetails() {
 									name="city"
 									value={contact.city}
 									onChange={handleChange}
+									required
+								/>
+							</label>
+							<br />
+
+							<label>
+								City:
+								<input
+									type="text"
+									name="city"
+									value={contact.city}
+									onChange={handleChange}
+									required
+								/>
+							</label>
+							<br />
+
+							<label>
+								Latitude:
+								<input
+									type="text"
+									name="latitude"
+									value={contact.latitude}
+									onChange={handleChange}
+									required
+								/>
+							</label>
+							<br />
+
+							<label>
+								Longitude:
+								<input
+									type="text"
+									name="longitude"
+									value={contact.longitude}
+									onChange={handleChange}
+									required
+								/>
+							</label>
+							<br />
+
+							<label>
+								Favourite Colour:
+								<input
+									type="text"
+									name="favouriteColour"
+									value={contact.favouriteColour}
+									onChange={handleChange}
+									required
+								/>
+							</label>
+							<br />
+
+							<label>
+								Profile Image:
+								<input
+									type="text"
+									name="profileImage"
+									value={contact.profileImage}
+									onChange={handleChange}
+									required
 								/>
 							</label>
 							<br />
@@ -115,7 +217,6 @@ function ContactDetails() {
 							>
 								Cancel
 							</button>
-                            
 						</form>
 					</div>
 				</div>
