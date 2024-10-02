@@ -14,7 +14,7 @@ function CreateContact() {
 	function handleSubmit(e) {
 		e.preventDefault();
 
-		fetch("https://boolean-uk-api-server.fly.dev/KajaPlaszko/contacts", {
+		fetch("https://boolean-uk-api-server.fly.dev/KajaPlaszko/contact", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

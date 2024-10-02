@@ -5,7 +5,7 @@ function ContactList() {
 	const [contacts, setContacts] = useState([]);
 
 	useEffect(() => {
-		fetch("https://boolean-uk-api-server.fly.dev/KajaPlaszko/contacts")
+		fetch("https://boolean-uk-api-server.fly.dev/KajaPlaszko/contact/")
 			.then((response) => response.json())
 			.then((data) => setContacts(data));
 	}, []);

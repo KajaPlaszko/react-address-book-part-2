@@ -6,7 +6,7 @@ function ContactDetails() {
 	const [contact, setContact] = useState(null);
 
 	useEffect(() => {
-		fetch(`https://boolean-uk-api-server.fly.dev/KajaPlaszko/contacts/${id}`)
+		fetch(`https://boolean-uk-api-server.fly.dev/KajaPlaszko/contact/${id}`)
 			.then((response) => response.json())
 			.then((data) => setContact(data));
 	}, [id]);
