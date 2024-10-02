@@ -1,0 +1,20 @@
+nav {
+    margin-bottom: 20px;
+  }
+  
+  nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: blue;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  form input {
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+  
