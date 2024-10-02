@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ContactList from "./components/ContactList";
 import ContactDetails from "./components/ContactDetails";
 import CreateContact from "./components/CreateContact";
+import UpdateContact from "./components/UpdateContact";
 
 function App() {
 	return (
@@ -12,7 +13,7 @@ function App() {
 					<h2>Menu</h2>
 					<ul>
 						<li>
-							<Link to="/contacts">See Contact List</Link> 
+							<Link to="/contacts">See Contact List</Link>
 						</li>
 					</ul>
 					<ul>
@@ -20,24 +21,29 @@ function App() {
 							<Link to="/create">Add New Contact</Link>
 						</li>
 					</ul>
+                   
 				</nav>
 
-            <div className="main-content">
-				<Routes>
-					<Route
-						path="/contacts"
-						element={<ContactList />}
-					/>
-					<Route
-						path="/contacts/:id"
-						element={<ContactDetails />}
-					/>
-					<Route
-						path="/create"
-						element={<CreateContact />}
-					/>
-				</Routes>
-                </div>
+				<div className="main-content">
+					<Routes>
+						<Route
+							path="/contacts"
+							element={<ContactList />}
+						/>
+						<Route
+							path="/contacts/:id"
+							element={<ContactDetails />}
+						/>
+						<Route
+							path="/create"
+							element={<CreateContact />}
+						/>
+						<Route
+							path="/contacts/:id/update"
+							element={<UpdateContact />}
+						/>
+					</Routes>
+				</div>
 			</div>
 		</Router>
 	);

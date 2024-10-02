@@ -5,10 +5,14 @@ function ContactList() {
 	const [contacts, setContacts] = useState([]);
 
 	useEffect(() => {
+		fetchContacts();
+	}, []);
+
+	function fetchContacts() {
 		fetch("https://boolean-uk-api-server.fly.dev/KajaPlaszko/contact/")
 			.then((response) => response.json())
 			.then((data) => setContacts(data));
-	}, []);
+	}
 
 	return (
 		<div>
@@ -26,4 +30,4 @@ function ContactList() {
 	);
 }
 
-export default ContactList
+export default ContactList;
